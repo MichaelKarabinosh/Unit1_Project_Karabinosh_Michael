@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println("Welcome to the Tip Calculator (Version 1.1)");
+        System.out.println("Welcome to the Tip Calculator (Version 1.2)");
         System.out.println("Do NOT type any symbols when using the calculator!");
-        System.out.println("------------------------------------");
+        System.out.println("----------------------------------------------");
 
         Scanner s = new Scanner(System.in);
         System.out.print("Bill Amount: $");
@@ -30,12 +30,13 @@ public class Main {
         System.out.println("----------------------------------------------");
         System.out.println("Total Bill Per Person: $" + String.format("%.2f", eachPersonPay)); // This stat is displayed first because it is the most useful
         System.out.println("----------------------------------------------");
+        System.out.println("Final Bill: $" + String.format("%.2f", finalBill)); // This follows total bill per person in terms of importance for the average customer
+        System.out.println("----------------------------------------------");
         System.out.println("Tip Per Person: $" + String.format("%.2f", tipEachPerson));
         System.out.println("----------------------------------------------");
         System.out.println("Total Tip: $" + String.format("%.2f", tipTotal));
         System.out.println("----------------------------------------------");
-        System.out.println("Final Bill: $" + String.format("%.2f", finalBill)); // This is displayed at the end because it is the final bill; makes the most sense
-        System.out.println("----------------------------------------------");
+
         s.close(); // Stops the scanner s to prevent memory leak
 
     }
